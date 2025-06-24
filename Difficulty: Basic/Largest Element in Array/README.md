@@ -1,0 +1,12 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1">Largest Element in Array</a></h2><h3>Difficulty Level : Difficulty: Basic</h3><hr><div class="problems_problem_content__Xm_eO" style="user-select: auto;"><p style="user-select: auto;"><span style="font-size: 14pt; user-select: auto;">Given an array <strong style="user-select: auto;">arr[].</strong><strong style="user-select: auto;"> </strong>The task is to find the <strong style="user-select: auto;">largest</strong> element and return it.</span></p>
+<p style="user-select: auto;"><span style="font-size: 14pt; user-select: auto;"><strong style="user-select: auto;">Examples:</strong></span></p>
+<pre style="user-select: auto;"><span style="font-size: 14pt; user-select: auto;"><strong style="user-select: auto;">Input: </strong>arr[] = [1, 8, 7, 56, 90]
+<strong style="user-select: auto;">Output: </strong>90
+<strong style="user-select: auto;">Explanation: </strong>The largest element of the given array is 90.</span></pre>
+<pre style="user-select: auto;"><span style="font-size: 14pt; user-select: auto;"><strong style="user-select: auto;">Input: </strong>arr[] = [5, 5, 5, 5]
+<strong style="user-select: auto;">Output: </strong>5
+<strong style="user-select: auto;">Explanation: </strong>The largest element of the given array is 5.</span></pre>
+<pre style="user-select: auto;"><span style="font-size: 14pt; user-select: auto;"><strong style="user-select: auto;">Input: </strong>arr[] = [10]
+<strong style="user-select: auto;">Output: </strong>10
+<strong style="user-select: auto;">Explanation: </strong>There is only one element which is the largest.</span></pre>
+<p style="user-select: auto;"><span style="font-size: 14pt; user-select: auto;"><strong style="user-select: auto;">Constraints:<br style="user-select: auto;"></strong>1 &lt;= arr.size()&lt;= 10<sup style="user-select: auto;">6</sup><br style="user-select: auto;">0 &lt;= arr[i] &lt;= 10<sup style="user-select: auto;">6</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Infosys</code>&nbsp;<code>Oracle</code>&nbsp;<code>Wipro</code>&nbsp;<code>Morgan Stanley</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Data Structures</code>&nbsp;
