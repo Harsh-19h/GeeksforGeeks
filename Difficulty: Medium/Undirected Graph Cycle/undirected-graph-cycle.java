@@ -1,27 +1,12 @@
 class Solution {
-    class pair{
-        int val;
-        int parent;
-        pair(int val,int parent){
-            this.val = val;
-            this.parent = parent;
-        }
-    }
-    public boolean bfs(boolean visited[], int i, List<List<Integer>> list){
-        Queue<pair> q = new LinkedList<>();
-        q.add(new pair(i,-1));
+    public boolean dfs(boolean visited[], int i, int parent, List<List<Integer>> list){
         visited[i] = true;
-        while(!q.isEmpty()){
-            pair curr = q.poll();
-            visited[curr.val] = true;
-            for(int j=0;j<list.get(curr.val).size();j++){
-                int c = list.get(curr.val).get(j);
-                if(visited[c]==false) {
-                    q.add(new pair(c,curr.val));
-                    visited[c] = true;
-                }
-                else if(c!=curr.parent) return true;
+        for(int j=0;j<list.get(i).size();j++){
+            int c = list.get(i).get(j);
+            if(visited[c]==false) {
+                if(dfs(visited,c,i,list)) return true;
             }
+            else if(c!=parent) return true;
         }
         return false;
     }
@@ -39,7 +24,7 @@ class Solution {
         boolean visited[] = new boolean [V];
         for(int i=0;i<V;i++){
             if(!visited[i]){
-                if(bfs(visited,i,list)) return true;
+                if(dfs(visited,i,-1,list)) return true;
             }
         }
         return false;
