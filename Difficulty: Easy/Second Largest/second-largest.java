@@ -1,15 +1,18 @@
 class Solution {
     public int getSecondLargest(int[] arr) {
-        int max = arr[0];
-        int max2 = -1;
-        for(int i =0;i<arr.length;i++){
-            if(arr[i]>max && arr[i]>max2){
-            max2 = max;
-            max=arr[i];
+        // code here
+        int m1 = -1;
+        int m2 = -1;
+        for(int val: arr){
+            if(val>m1){
+                m2 = m1;
+                m1 = val;
             }
-            if(arr[i]<max && arr[i]>max2)
-            max2= arr[i];
+            else if(val>m2 && val!=m1){
+                m2 = val;
+            }
+            
         }
-        return max2;
+        return m2;
     }
 }
