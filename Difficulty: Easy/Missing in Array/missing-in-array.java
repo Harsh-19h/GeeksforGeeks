@@ -1,38 +1,18 @@
-//{ Driver Code Starts
-import java.io.*;
-import java.util.*;
-
-class Geeks {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(br.readLine());
-        for (int g = 0; g < t; g++) {
-            String[] str = (br.readLine()).trim().split(" ");
-            int arr[] = new int[str.length];
-            for (int i = 0; i < str.length; i++) {
-                arr[i] = Integer.parseInt(str[i]);
-            }
-            System.out.println(new Solution().missingNumber(arr));
-            System.out.println("~");
-        }
-    }
-}
-// } Driver Code Ends
-
-
-// User function Template for Java
 class Solution {
-    int missingNumber(int arr[]) {
-        int n = arr.length;
-        long sum =0;
-        long res=0;
-        for(int i=1;i<=n+1;i++){
-            res+=i;
+    int missingNum(int arr[]) {
+        
+        for(int i=0;i<arr.length;i++){
+            
+            if(Math.abs(arr[i]) > arr.length ) continue;
+            
+            int val = Math.abs(arr[i])-1;
+             arr[val] = -arr[val];
         }
-      for(int i=0;i<n;i++){
-          sum +=arr[i];
-      } 
-      int ans = (int) (res -sum);
-      return ans  ;
+        
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>0) return i+1 ;
+        }
+        
+        return arr.length+1;
     }
 }
